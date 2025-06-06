@@ -31,8 +31,7 @@ def create_model(data):
 
 
 def get_clean_data():
-    data = pd.read_csv(
-        "data/data.csv")
+    data = pd.read_csv("data/data.csv")
     data = data.drop(columns=['Unnamed: 32', 'id'])
     data['diagnosis'] = data['diagnosis'].map({'M': 1, 'B': 0})
 
